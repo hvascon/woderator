@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794D3E271AEA64BA00AFCA97 /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794D3E261AEA64BA00AFCA97 /* AddExerciseViewController.swift */; };
 		796FABEE1AE65C7500B2C304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796FABED1AE65C7500B2C304 /* AppDelegate.swift */; };
-		796FABF01AE65C7500B2C304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796FABEF1AE65C7500B2C304 /* ViewController.swift */; };
 		796FABF31AE65C7500B2C304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796FABF11AE65C7500B2C304 /* Main.storyboard */; };
 		796FABF51AE65C7500B2C304 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796FABF41AE65C7500B2C304 /* Images.xcassets */; };
 		796FABF81AE65C7500B2C304 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796FABF61AE65C7500B2C304 /* LaunchScreen.xib */; };
 		796FAC041AE65C7500B2C304 /* WoderatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796FAC031AE65C7500B2C304 /* WoderatorTests.swift */; };
+		79A9E1411AE683C7003B45D9 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E1401AE683C7003B45D9 /* GeneratorViewController.swift */; };
+		79A9E1441AE696F7003B45D9 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E1431AE696F7003B45D9 /* ReportViewController.swift */; };
+		79A9E1491AE698E2003B45D9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E1481AE698E2003B45D9 /* Exercise.swift */; };
+		79A9E14C1AE6A2E6003B45D9 /* WodGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E14B1AE6A2E6003B45D9 /* WodGenerator.swift */; };
+		79A9E14F1AE6DCEB003B45D9 /* WODsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E14D1AE6DCEB003B45D9 /* WODsModel.xcdatamodeld */; };
+		79A9E1561AE6DE56003B45D9 /* WodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9E1551AE6DE56003B45D9 /* WodModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +32,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		794D3E261AEA64BA00AFCA97 /* AddExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
 		796FABE81AE65C7500B2C304 /* Woderator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woderator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796FABEC1AE65C7500B2C304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796FABED1AE65C7500B2C304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		796FABEF1AE65C7500B2C304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		796FABF21AE65C7500B2C304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		796FABF41AE65C7500B2C304 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		796FABF71AE65C7500B2C304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		796FABFD1AE65C7500B2C304 /* WoderatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoderatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		796FAC021AE65C7500B2C304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796FAC031AE65C7500B2C304 /* WoderatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoderatorTests.swift; sourceTree = "<group>"; };
+		79A9E1401AE683C7003B45D9 /* GeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		79A9E1431AE696F7003B45D9 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		79A9E1481AE698E2003B45D9 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		79A9E14B1AE6A2E6003B45D9 /* WodGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodGenerator.swift; sourceTree = "<group>"; };
+		79A9E14E1AE6DCEB003B45D9 /* WODsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WODsModel.xcdatamodel; sourceTree = "<group>"; };
+		79A9E1551AE6DE56003B45D9 /* WodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WodModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		794D3E251AEA64A600AFCA97 /* Temporar */ = {
+			isa = PBXGroup;
+			children = (
+				794D3E261AEA64BA00AFCA97 /* AddExerciseViewController.swift */,
+			);
+			name = Temporar;
+			sourceTree = "<group>";
+		};
 		796FABDF1AE65C7500B2C304 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +97,11 @@
 		796FABEA1AE65C7500B2C304 /* Woderator */ = {
 			isa = PBXGroup;
 			children = (
+				794D3E251AEA64A600AFCA97 /* Temporar */,
+				79A9E14A1AE6A2A5003B45D9 /* Classes */,
+				79A9E1451AE6974A003B45D9 /* Models */,
+				79A9E1421AE696E2003B45D9 /* View Controllers */,
 				796FABED1AE65C7500B2C304 /* AppDelegate.swift */,
-				796FABEF1AE65C7500B2C304 /* ViewController.swift */,
 				796FABF11AE65C7500B2C304 /* Main.storyboard */,
 				796FABF41AE65C7500B2C304 /* Images.xcassets */,
 				796FABF61AE65C7500B2C304 /* LaunchScreen.xib */,
@@ -110,6 +133,33 @@
 				796FAC021AE65C7500B2C304 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79A9E1421AE696E2003B45D9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79A9E1401AE683C7003B45D9 /* GeneratorViewController.swift */,
+				79A9E1431AE696F7003B45D9 /* ReportViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		79A9E1451AE6974A003B45D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79A9E1481AE698E2003B45D9 /* Exercise.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		79A9E14A1AE6A2A5003B45D9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				79A9E14D1AE6DCEB003B45D9 /* WODsModel.xcdatamodeld */,
+				79A9E1551AE6DE56003B45D9 /* WodModel.swift */,
+				79A9E14B1AE6A2E6003B45D9 /* WodGenerator.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796FABF01AE65C7500B2C304 /* ViewController.swift in Sources */,
+				79A9E14F1AE6DCEB003B45D9 /* WODsModel.xcdatamodeld in Sources */,
+				79A9E1441AE696F7003B45D9 /* ReportViewController.swift in Sources */,
+				794D3E271AEA64BA00AFCA97 /* AddExerciseViewController.swift in Sources */,
+				79A9E14C1AE6A2E6003B45D9 /* WodGenerator.swift in Sources */,
+				79A9E1561AE6DE56003B45D9 /* WodModel.swift in Sources */,
+				79A9E1411AE683C7003B45D9 /* GeneratorViewController.swift in Sources */,
 				796FABEE1AE65C7500B2C304 /* AppDelegate.swift in Sources */,
+				79A9E1491AE698E2003B45D9 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +396,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Woderator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Woderator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +468,7 @@
 				796FAC091AE65C7500B2C304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		796FAC0A1AE65C7500B2C304 /* Build configuration list for PBXNativeTarget "WoderatorTests" */ = {
 			isa = XCConfigurationList;
@@ -417,8 +477,22 @@
 				796FAC0C1AE65C7500B2C304 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		79A9E14D1AE6DCEB003B45D9 /* WODsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				79A9E14E1AE6DCEB003B45D9 /* WODsModel.xcdatamodel */,
+			);
+			currentVersion = 79A9E14E1AE6DCEB003B45D9 /* WODsModel.xcdatamodel */;
+			path = WODsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 796FABE01AE65C7500B2C304 /* Project object */;
 }

@@ -1,25 +1,177 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UYD-z8-BMl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="K64-jg-1cT">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="UYD-z8-BMl" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PZ0-0q-dJH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="mFn-2s-8gd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DW-vx-rWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="261"/>
+        </scene>
+        <!--WODify-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="GeneratorViewController" customModule="Woderator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crossfit Wod Programming Generator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OY-2G-cGm">
+                                <rect key="frame" x="156" y="50" width="289" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-If-UAd">
+                                <rect key="frame" x="16" y="91" width="568" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="0sn-AC-ZkO">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0sn-AC-ZkO" id="Miz-Vb-7PV">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="FmW-LA-Otb"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="X1g-zf-e9E"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKN-Ac-Kpo">
+                                <rect key="frame" x="251" y="550" width="98" height="30"/>
+                                <state key="normal" title="Add Exercises">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DTc-zA-ZPG" kind="push" identifier="addExercisesSegue" id="dGQ-wC-xgF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dOi-If-UAd" secondAttribute="bottom" constant="80" id="5Jx-zN-ft2"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eKN-Ac-Kpo" secondAttribute="bottom" constant="20" id="CFv-bY-gfo"/>
+                            <constraint firstItem="3OY-2G-cGm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="50" id="K8M-qa-fVP"/>
+                            <constraint firstItem="dOi-If-UAd" firstAttribute="top" secondItem="3OY-2G-cGm" secondAttribute="bottom" constant="20" id="NQN-t9-Mzy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dOi-If-UAd" secondAttribute="trailing" id="OhB-Y6-ubL"/>
+                            <constraint firstAttribute="centerX" secondItem="3OY-2G-cGm" secondAttribute="centerX" id="R1H-gQ-EEh"/>
+                            <constraint firstItem="dOi-If-UAd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="SdI-Ou-S85"/>
+                            <constraint firstAttribute="centerX" secondItem="eKN-Ac-Kpo" secondAttribute="centerX" id="ejn-1L-QeD"/>
+                            <constraint firstAttribute="centerX" secondItem="dOi-If-UAd" secondAttribute="centerX" id="zf4-2y-2HH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="WODify" id="rZL-Tr-4P9"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="dOi-If-UAd" id="swb-uO-Bwr"/>
+                        <segue destination="hDg-Hv-dH6" kind="push" identifier="ReportViewControllerSegue" id="8wW-pG-9qN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Weekly Programming-->
+        <scene sceneID="ogJ-NP-Uqa">
+            <objects>
+                <viewController id="hDg-Hv-dH6" customClass="ReportViewController" customModule="Woderator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i3S-jN-fqd"/>
+                        <viewControllerLayoutGuide type="bottom" id="hYn-5S-qv1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUZ-bB-Ots">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weekly Programming" id="dvl-vL-gob"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvj-X8-Abb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="261"/>
+        </scene>
+        <!--Add Exercise View Controller-->
+        <scene sceneID="r3N-cd-8Fn">
+            <objects>
+                <viewController id="DTc-zA-ZPG" customClass="AddExerciseViewController" customModule="Woderator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fsa-k0-Pga"/>
+                        <viewControllerLayoutGuide type="bottom" id="L9z-zm-NFd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oH9-Sl-wLB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91k-jG-X4x">
+                                <rect key="frame" x="200" y="141" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="iOw-fN-7YF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-w0-Zke">
+                                <rect key="frame" x="277" y="80" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modality" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-gs-Ntu">
+                                <rect key="frame" x="267" y="251" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yy4-oU-xVh">
+                                <rect key="frame" x="140" y="282" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DTc-zA-ZPG" id="mvx-4Y-1gN"/>
+                                    <outlet property="delegate" destination="DTc-zA-ZPG" id="Dgd-Ia-0Rf"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pqK-gs-Ntu" firstAttribute="top" secondItem="91k-jG-X4x" secondAttribute="bottom" constant="80" id="9sI-k9-YDf"/>
+                            <constraint firstAttribute="centerX" secondItem="pqK-gs-Ntu" secondAttribute="centerX" id="dEV-CA-Y8a"/>
+                            <constraint firstAttribute="centerX" secondItem="VDA-w0-Zke" secondAttribute="centerX" id="e98-Ig-Wo1"/>
+                            <constraint firstItem="Yy4-oU-xVh" firstAttribute="top" secondItem="pqK-gs-Ntu" secondAttribute="bottom" constant="10" id="ey8-FU-aUe"/>
+                            <constraint firstItem="91k-jG-X4x" firstAttribute="top" secondItem="VDA-w0-Zke" secondAttribute="bottom" constant="40" id="lEy-2f-GXJ"/>
+                            <constraint firstAttribute="centerX" secondItem="Yy4-oU-xVh" secondAttribute="centerX" id="q0M-aD-lmg"/>
+                            <constraint firstAttribute="centerX" secondItem="pqK-gs-Ntu" secondAttribute="centerX" id="qMf-at-2ed"/>
+                            <constraint firstItem="VDA-w0-Zke" firstAttribute="top" secondItem="oH9-Sl-wLB" secondAttribute="topMargin" constant="80" id="tox-x5-mdW"/>
+                            <constraint firstAttribute="centerX" secondItem="91k-jG-X4x" secondAttribute="centerX" id="wt9-gc-BrT"/>
+                            <constraint firstAttribute="centerX" secondItem="91k-jG-X4x" secondAttribute="centerX" id="zxZ-el-zgB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Orm-6a-XUy"/>
+                    <connections>
+                        <outlet property="modality" destination="Yy4-oU-xVh" id="VfH-wb-bXo"/>
+                        <outlet property="name" destination="91k-jG-X4x" id="V0v-tC-rw9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okh-be-JzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="998"/>
         </scene>
     </scenes>
 </document>
